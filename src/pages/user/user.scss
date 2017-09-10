@@ -1,0 +1,42 @@
+page-user {
+
+}
+
+.getstart{
+    background-image: url('../assets/background/2.jpg');
+    background-repeat: no-repeat;
+         background-size: cover;
+  }
+
+.font{
+    font-size: 350%;
+    color: white;
+    font-weight: bold;
+    margin-left: 10%;
+    margin-bottom: 0%;
+    height: 40%;;
+}
+
+.font2{
+    color: white;
+    margin-left: 10%;
+}
+
+// .pos
+//     {
+//         line-height: 1.5em;
+//         height: 10em;       /* height is 2x line-height, so two lines will display */
+//         overflow: hidden;  /* prevents extra lines from being visible */
+//     }
+.prof{
+    width: 40%;
+    margin-left: 5%;
+    float:left;
+}
+.two {
+    float:right; 
+    width: 20%;
+    margin-right: 20%;
+    margin-top: 20%;
+    margin-bottom: 10%;
+  }

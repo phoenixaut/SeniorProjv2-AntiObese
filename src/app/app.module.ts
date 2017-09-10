@@ -1,3 +1,9 @@
+import { PlanPage } from './../pages/plan/plan';
+import { MygoalPage } from './../pages/mygoal/mygoal';
+import { ActivityPage } from './../pages/activity/activity';
+import { MainPage } from './../pages/main/main';
+import { UserPage } from './../pages/user/user';
+import { LoginPage } from './../pages/login/login';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -13,7 +19,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    LoginPage,
+    UserPage,
+    MainPage,
+    ActivityPage,
+    MygoalPage,
+    PlanPage
   ],
   imports: [
     BrowserModule,
@@ -23,7 +35,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    LoginPage,
+    UserPage,
+    MainPage,
+    ActivityPage,
+    MygoalPage,
+    PlanPage
   ],
   providers: [
     StatusBar,
