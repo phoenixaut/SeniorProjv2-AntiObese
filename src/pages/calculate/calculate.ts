@@ -101,5 +101,4 @@ adjustDayIn(){
   this.dayChange = this.dayDefalut[this.counter];
 }
 
-
 }
