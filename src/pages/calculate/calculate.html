@@ -1,0 +1,35 @@
+<!--
+  Generated template for the CalculatePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>calculate</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<h1>ประมวณผลร่างกาย</h1>
+<ion-list>
+
+
+  <ion-item class="clor2">
+    <ion-label >น้ำหนัก</ion-label>
+   <ion-input type="text" disabled [(ngModel)]="weightChange"></ion-input>
+   <button clear item-left (click) = adjustWeightDe()><ion-icon name ="ios-arrow-dropleft"></ion-icon></button>
+   <button clear item-right (click) = adjustWeightIn()><ion-icon name ="ios-arrow-dropright"></ion-icon></button>
+  </ion-item>
+
+  <ion-item class="clor2">
+    <ion-label >วัน</ion-label>
+   <ion-input type="text" disabled [(ngModel)]="dayChange"></ion-input>
+   <button clear item-left (click) = adjustDayDe()><ion-icon name ="ios-arrow-dropleft"></ion-icon></button>
+   <button clear item-right (click) = adjustDayIn()><ion-icon name ="ios-arrow-dropright"></ion-icon></button>
+  </ion-item>
+</ion-list>
+</ion-content>

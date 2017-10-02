@@ -7,17 +7,58 @@
   </ion-navbar>
 </ion-header>
 
+
+
+
 <ion-content padding class="getstart">
   <img src="../assets/background/boy.png" class="one">
   <img src="../assets/background/girl.png" class="two">
 
-  <ion-list class="pos">
+  <!-- <ion-list class="pos">
     <button ion-button round class="but">AGE</button><br>
     <button ion-button round class="but">WEIGHT</button><br>
     <button ion-button round class="but">HEIGHT</button><br>
-  </ion-list>
+  </ion-list> -->
+  <ion-list>
+    <ion-item class="label2">
+      <ion-label floating class="clor"><ion-icon name="contact" class="clor"></ion-icon> ชื่อ</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
 
+    <ion-item class="label2">
+    <ion-range min="7" max="60"  [(ngModel)]="age" (ionChange)="getAge($event)">
+      <ion-icon range-left small>อายุ</ion-icon>
+      <ion-icon range-right small>{{age}}ปี</ion-icon>
+    </ion-range>
+  </ion-item>
+
+  <ion-item class="label3">
+  <ion-range min="30" max="150"  [(ngModel)]="weight" (ionChange)="getWeight($event)">
+    <ion-icon range-left small>น้ำหนัก</ion-icon>
+    <ion-icon range-right small>{{weight}}กก.</ion-icon>
+  </ion-range>
+</ion-item>
+
+<ion-item class="label3">
+<ion-range min="50" max="270"  [(ngModel)]="height" (ionChange)="getHeight($event)">
+  <ion-icon range-left small>ส่วนสูง</ion-icon>
+  <ion-icon range-right small>{{height}}ซม.</ion-icon>
+</ion-range>
+</ion-item>
+
+<ion-item class="label3">
+  <ion-label>ประเภทการออกกำลังกาย</ion-label>
+  <ion-select [(ngModel)]="activity">
+    <ion-option value="1">ไม่ออกกำลังกาย</ion-option>
+    <ion-option value="2">ออกกำลังกายน้อย(2-3วัน)</ion-option>
+    <ion-option value="3">ออกกำลังกายปานกลาง(3-5วัน)</ion-option>
+    <ion-option value="4">ออกกำลังกายหนัก(6-7วัน)</ion-option>
+    <ion-option value="5">นักกีฬา</ion-option>
+  </ion-select>
+</ion-item>
+
+</ion-list>
   <div padding>
-    <button ion-button class="size">CONFIRM</button>
+    <button ion-button class="size" (click) = "goToCal()">CONFIRM</button>
   </div>
 </ion-content>

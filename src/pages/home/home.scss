@@ -16,7 +16,7 @@ page-home {
     }
 
   .two {
-      float:right; 
+      float:right;
       width: 20%;
       margin-right: 20%;
       margin-top: 20%;
@@ -26,4 +26,25 @@ page-home {
 .but{
     width: 50%;
     margin-left: 25%;
+}
+.clor{
+  color: Green;
+}
+.label2{
+    background-color: transparent;
+    margin-top: 5% !important;
+    color: Green !important;
+    border-style: none !important;
+    border-width: 0 0 0 0 !important;
+    border-color: #0E8CCD !important;
+    font-size: 110%;
+}
+.label3{
+    background-color: transparent;
+    margin-top: 5% !important;
+    color: white !important;
+    border-style: none !important;
+    border-width: 0 0 0 0 !important;
+    border-color: #0E8CCD !important;
+    font-size: 110%;
 }

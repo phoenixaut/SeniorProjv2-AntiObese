@@ -14,7 +14,7 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import {CalculatePage} from '../pages/calculate/calculate'
 @NgModule({
   declarations: [
     MyApp,
@@ -25,7 +25,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MainPage,
     ActivityPage,
     MygoalPage,
-    PlanPage
+    PlanPage,
+    CalculatePage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +42,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MainPage,
     ActivityPage,
     MygoalPage,
-    PlanPage
+    PlanPage,
+    CalculatePage
   ],
   providers: [
     StatusBar,
