@@ -32,6 +32,11 @@
     </ion-range>
   </ion-item>
 
+  <ion-item class="label2">
+    <ion-label>Date</ion-label>
+    <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="myDate" (ionChange)="getDate()"></ion-datetime>
+  </ion-item>
+
   <ion-item class="label3">
   <ion-range min="30" max="150"  [(ngModel)]="weight" (ionChange)="getWeight($event)">
     <ion-icon range-left small>น้ำหนัก</ion-icon>
@@ -50,13 +55,20 @@
   <ion-label>ประเภทการออกกำลังกาย</ion-label>
   <ion-select [(ngModel)]="activity">
     <ion-option value="1">ไม่ออกกำลังกาย</ion-option>
-    <ion-option value="2">ออกกำลังกายน้อย(2-3วัน)</ion-option>
-    <ion-option value="3">ออกกำลังกายปานกลาง(3-5วัน)</ion-option>
+    <ion-option value="2">ออกกำลังกายน้อย(1-3วัน)</ion-option>
+    <ion-option value="3">ออกกำลังกายปานกลาง(4-5วัน)</ion-option>
     <ion-option value="4">ออกกำลังกายหนัก(6-7วัน)</ion-option>
     <ion-option value="5">นักกีฬา</ion-option>
   </ion-select>
 </ion-item>
 
+<ion-item class="label3">
+  <ion-label>เพศ</ion-label>
+  <ion-select [(ngModel)]="gender" (ionChange)="getGender()">
+    <ion-option value="1">ชาย</ion-option>
+    <ion-option value="2">หญิง</ion-option>
+  </ion-select>
+</ion-item>
 </ion-list>
   <div padding>
     <button ion-button class="size" (click) = "goToCal()">CONFIRM</button>

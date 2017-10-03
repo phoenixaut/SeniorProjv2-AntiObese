@@ -1,3 +1,4 @@
+import { FlagPage } from './../pages/flag/flag';
 import { PlanPage } from './../pages/plan/plan';
 import { MygoalPage } from './../pages/mygoal/mygoal';
 import { ActivityPage } from './../pages/activity/activity';
@@ -26,7 +27,8 @@ import {CalculatePage} from '../pages/calculate/calculate'
     ActivityPage,
     MygoalPage,
     PlanPage,
-    CalculatePage
+    CalculatePage,
+    FlagPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import {CalculatePage} from '../pages/calculate/calculate'
     ActivityPage,
     MygoalPage,
     PlanPage,
-    CalculatePage
+    CalculatePage,
+    FlagPage
   ],
   providers: [
     StatusBar,

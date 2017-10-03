@@ -6,18 +6,29 @@ import { CalculatePage } from './../calculate/calculate';
   templateUrl: 'home.html'
 })
 export class HomePage {
-age = 34;
-weight = 90;
-height = 160;
-activity;
+age = 23;
+weight = 85;
+height = 168;
+activity = 1;
 public bmi;
 public bmr;
+public myDate;
+public gender;
   constructor(public navCtrl: NavController) {
 
   }
   ionViewDidLoad() {
     this.calculateBMI();
     this.calculateBMR();
+  }
+  public getDate(){
+    // console.log(this.myDate);
+    
+  }
+
+  public getGender(){
+    // console.log(this.gender);
+    
   }
 public getAge($event){
   // console.log(this.age);
@@ -26,6 +37,7 @@ public getAge($event){
 public getWeight($event){
   // console.log(this.weight);
 }
+
 
 public getHeight($event){
   // console.log(this.height);
@@ -36,7 +48,7 @@ this.bmi = parseFloat(this.bmi).toFixed(2);
 }
 
 calculateBMR(){
-this.bmr =   66 + (13.7 * this.weight) + (5 * this.height) - (6.8 *this.age);
+
 this.bmr = parseFloat(this.bmr).toFixed(2);
 }
 goToCal() {
@@ -46,7 +58,8 @@ goToCal() {
       heights: this.height,
       activities: this.activity,
       bmi: this.bmi,
-      bmr: this.bmr
+      bmr: this.bmr,
+      gender: this.gender
     })
 }
 }
