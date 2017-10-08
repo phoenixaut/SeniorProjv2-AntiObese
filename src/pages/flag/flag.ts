@@ -49,6 +49,6 @@ calculateFruits(){
   this.NofFruits = this.NofFruits - 1;
 }
 calculateMeat(){
-  this.NofMeats = Math.round(this.bmr * 0.0075*2)/2;
+  this.NofMeats = Math.round(this.bmr * 0.00133*2)/2;
 }
 }

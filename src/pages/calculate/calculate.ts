@@ -37,24 +37,32 @@ export class CalculatePage {
   public tdee2 = 0.00;
   public counter2 = 0;
   public calPerDay;
+  public gender;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.ages = navParams.get("ages");
     this.weights = navParams.get("weights");
     this.heights = navParams.get("heights");
     this.bmi = navParams.get("bmi");
     this.activity = navParams.get("activities");
+    this.gender = navParams.get("gender");
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CalculatePage');
     // console.log(this.ages + " " + this.weights + " " + this.heights +" "+ this.activity);
-    this.bmr =   66 + (13.7 * this.weights) + (5 * this.heights) - (6.8 *this.ages);
+    if(this.gender == 1){
+      this.bmr =   66 + (13.7 * this.weights) + (5 * this.heights) - (6.8 * this.ages);
+    }else if(this.gender == 2){
+      this.bmr =   665 + (9.6 * this.weights) + (1.8 * this.heights) - (4.7 * this.ages);
+      
+    }
     this.calculateWeight();
     this.calculateDay();
     this.calculateTdee();
+    this.calculateCal();
     console.log("BMI= "+this.bmi + " " +"BMR= "+ this.bmr);
-    console.log(this.tdee);
-    console.log("Activity "+this.activity);
+    // console.log(this.tdee);
+    // console.log("Gender "+this.gender);
     
 
   }
