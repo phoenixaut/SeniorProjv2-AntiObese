@@ -38,17 +38,19 @@ export class CalculatePage {
   public counter2 = 0;
   public calPerDay;
   public gender;
+  public myDate = "";
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.ages = navParams.get("ages");
     this.weights = navParams.get("weights");
     this.heights = navParams.get("heights");
     this.bmi = navParams.get("bmi");
     this.activity = navParams.get("activities");
     this.gender = navParams.get("gender");
+    this.myDate = navParams.get("birthDate");
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CalculatePage');
+    this.ages = this.calculateAge(this.myDate);
     // console.log(this.ages + " " + this.weights + " " + this.heights +" "+ this.activity);
     if(this.gender == 1){
       this.bmr =   66 + (13.7 * this.weights) + (5 * this.heights) - (6.8 * this.ages);
@@ -63,10 +65,21 @@ export class CalculatePage {
     console.log("BMI= "+this.bmi + " " +"BMR= "+ this.bmr);
     // console.log(this.tdee);
     // console.log("Gender "+this.gender);
+    // console.log(Date.now());
+    
     
 
   }
-  
+  public calculateAge(birthday) { // birthday is a date
+    var today = new Date();
+    var birthDate = new Date(birthday);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+}
   //this method is to calculate minimum and maximum of weight for suitable people
 calculateWeight(){
   this.weightDefault = this.heights / 100;

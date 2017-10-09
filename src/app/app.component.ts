@@ -1,3 +1,5 @@
+import { RegisterPage } from './../pages/register/register';
+import { FirstPage } from './../pages/first/first';
 import { PlanPage } from './../pages/plan/plan';
 import { MygoalPage } from './../pages/mygoal/mygoal';
 import { ActivityPage } from './../pages/activity/activity';
@@ -18,7 +20,7 @@ import {CalculatePage} from '../pages/calculate/calculate'
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LoginPage;
+  rootPage: any = FirstPage;
 
   pages: Array<{title: string, component: any}>;
 

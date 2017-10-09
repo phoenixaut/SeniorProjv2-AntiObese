@@ -22,7 +22,7 @@ public gender;
     this.calculateBMR();
   }
   public getDate(){
-    // console.log(this.myDate);
+    console.log(this.myDate.toString());
     
   }
 
@@ -59,7 +59,8 @@ goToCal() {
       activities: this.activity,
       bmi: this.bmi,
       bmr: this.bmr,
-      gender: this.gender
+      gender: this.gender,
+      birthDate: this.myDate
     })
 }
 }

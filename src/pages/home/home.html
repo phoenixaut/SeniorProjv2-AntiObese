@@ -25,15 +25,15 @@
       <ion-input type="text"></ion-input>
     </ion-item>
 
-    <ion-item class="label2">
+    <!-- <ion-item class="label2">
     <ion-range min="7" max="60"  [(ngModel)]="age" (ionChange)="getAge($event)">
       <ion-icon range-left small>อายุ</ion-icon>
       <ion-icon range-right small>{{age}}ปี</ion-icon>
     </ion-range>
-  </ion-item>
+  </ion-item> -->
 
   <ion-item class="label2">
-    <ion-label>Date</ion-label>
+    <ion-label>วันเกิด</ion-label>
     <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="myDate" (ionChange)="getDate()"></ion-datetime>
   </ion-item>
 
